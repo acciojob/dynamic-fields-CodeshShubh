@@ -35,7 +35,9 @@ const App = () => {
 
   const formSubmit = (e)=>{
     e.preventDefault();
-      console.log(fields)
+    const submittedData = fields.map(({ id, ...rest }) => rest); // destructure fields and take only rest
+  
+    console.log(submittedData);
   }
 
   return (
